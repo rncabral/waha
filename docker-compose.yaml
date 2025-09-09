@@ -22,12 +22,6 @@ services:
     ports:
       - '127.0.0.1:3000:3000/tcp'
 
-    environment:
-      - WAHA_CHROMIUM_DISABLE_SANDBOX=true
-      - WAHA_CHROMIUM_HEADLESS=true
-      - WAHA_LOG_LEVEL=info
-      - WAHA_CLEANUP_SESSIONS=true
-
     volumes:
       # Store sessions in the .sessions folder (comment it if you're using MongoDB)
       - './sessions:/app/.sessions'
